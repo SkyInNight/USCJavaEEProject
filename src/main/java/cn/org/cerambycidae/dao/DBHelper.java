@@ -12,7 +12,7 @@ public class DBHelper {
     private static String url;                                                      //数据库地址
     private static String username;                                                 //用户名
     private static String password;                                                 //密码
-    private static  final String JDBC_PROPERTIES_PATH="./src/main/java/resources/properties/jdbc.properties";       //配置文件路径
+    private static  final String JDBC_PROPERTIES_PATH="properties/jdbc.properties";       //配置文件路径
 
 
     static{
