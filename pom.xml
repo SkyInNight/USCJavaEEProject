@@ -50,6 +50,7 @@
 
         </plugins>
     </build>
+    <!-- 使用jdk1.8启动 -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
