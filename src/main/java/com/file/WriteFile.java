@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
-@WebServlet("/WriterFile")
+@WebServlet("/WriteFile")
 public class WriteFile extends HttpServlet{
     private static final long serialVersionUID = 1L;
     public WriteFile(){
