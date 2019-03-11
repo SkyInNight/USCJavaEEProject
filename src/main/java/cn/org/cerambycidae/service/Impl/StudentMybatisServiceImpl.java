@@ -22,6 +22,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.insert(example);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -34,6 +35,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.insertSelective(example);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -46,6 +48,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.updateByExampleSelective(example, eexample);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -58,6 +61,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.updateByExample(example, eexample);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -70,6 +74,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.updateByPrimaryKeySelective(example);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -82,6 +87,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.updateByPrimaryKey(example);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -94,6 +100,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.deleteByExample(eexample);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }
@@ -106,6 +113,7 @@ public class StudentMybatisServiceImpl implements StudentService {
         // 执行查询操作，将查询结果自动封装成User返回
         int conserquence = studentMapper.deleteByPrimaryKey(id);
         // 使用SqlSession执行完SQL之后需要关闭SqlSession
+        sqlSession.commit();
         sqlSession.close();
         return conserquence;
     }

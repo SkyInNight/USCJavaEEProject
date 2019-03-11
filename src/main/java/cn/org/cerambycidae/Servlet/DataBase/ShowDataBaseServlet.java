@@ -36,10 +36,6 @@ public class ShowDataBaseServlet extends HttpServlet {
 
         //数据处理，数据库连接方面，用来响应消息
         StudentService service=new StudentMybatisServiceImpl();
-
-//        StudentExample studentExample = new StudentExample();
-//        StudentExample.Criteria criteria = studentExample.createCriteria();
-//        criteria.andNameLike("%%");
         List<Student> students = service.selectByExample(NameAndAgeRequest.Conversion(name,age));
 
         //分页查找商品销售记录，需判断是否有带查询条件
