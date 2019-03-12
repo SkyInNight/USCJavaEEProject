@@ -1,4 +1,4 @@
-package cn.org.cerambycidae.util;
+package cn.org.cerambycidae.util.JsonUtil;
 
 import com.alibaba.fastjson.JSONObject;
 

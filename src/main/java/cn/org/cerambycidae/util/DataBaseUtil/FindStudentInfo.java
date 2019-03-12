@@ -1,4 +1,4 @@
-package cn.org.cerambycidae.util;
+package cn.org.cerambycidae.util.DataBaseUtil;
 
 import cn.org.cerambycidae.pojo.StudentInfoExample;
 

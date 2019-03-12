@@ -1,15 +1,9 @@
 package cn.org.cerambycidae.Servlet.StudentDataBase;
 
-import cn.org.cerambycidae.pojo.Student;
-import cn.org.cerambycidae.pojo.StudentExample;
 import cn.org.cerambycidae.pojo.StudentInfo;
 import cn.org.cerambycidae.pojo.StudentInfoExample;
 import cn.org.cerambycidae.service.Impl.StudentInfoServiceImpl;
-import cn.org.cerambycidae.service.Impl.StudentMybatisServiceImpl;
 import cn.org.cerambycidae.service.StudentInfoService;
-import cn.org.cerambycidae.service.StudentService;
-import cn.org.cerambycidae.util.NameAndAgeRequest;
-import com.alibaba.fastjson.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,8 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URLDecoder;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/DataBaseStudent/ShowStudentDataBase"})

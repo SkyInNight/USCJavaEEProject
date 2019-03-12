@@ -9,15 +9,15 @@ pageEncoding="UTF-8"%>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>学生数据库信息</title>
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="${ctx}/src/assets/i/favicon.png">
-    <script src="${ctx}/src/assets/js/echarts.min.js"></script>
+    <link rel="icon" type="image/png" href="${ctx}/src/src/assets/i/favicon.png">
+    <script src="${ctx}/src/src/assets/js/echarts.min.js"></script>
     <link href="https://cdn.bootcss.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${ctx}/src/assets/css/app.css">
+    <link rel="stylesheet" href="${ctx}/src/src/assets/css/app.css">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 </head>
 <body data-type="widgets">
-    <script src="${ctx}/src/assets/js/theme.js"></script>
+    <script src="${ctx}/src/src/assets/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 内容区域 -->
         <div class="row-content am-cf">
@@ -110,7 +110,7 @@ pageEncoding="UTF-8"%>
     </div>
     <script tpye="text/javascript">
         $(function () {
-            axios.get('${ctx}/DataBaseStudent/ShowStudentDataBase')
+            axios.get('${ctx}/src/DataBaseStudent/ShowStudentDataBase')
                 .then(function (response) {
                     //局部刷新动态组件
                     $("#table").load(location.href+" #table");
@@ -131,14 +131,14 @@ pageEncoding="UTF-8"%>
             if (option == "option4"){
                 value = 'major='+ $("input").val();
             }
-            axios.get('${ctx}/DataBaseStudent/FindStudentDataBase?'+value)
+            axios.get('${ctx}/src/DataBaseStudent/FindStudentDataBase?'+value)
                 .then(function (response) {
                     //局部刷新动态组件
                     $("#table").load(location.href+" #table");
                 });
         });
         deleteStudent = function (id) {
-            axios.get('${ctx}/DataBaseStudent/DeleteStudentDataBaseServlet?id='+id)
+            axios.get('${ctx}/src/DataBaseStudent/DeleteStudentDataBaseServlet?id='+id)
                 .then(function (response) {
                     //局部刷新动态组件
                     $("#table").load(location.href+" #table");
@@ -146,6 +146,6 @@ pageEncoding="UTF-8"%>
         }
     </script>
     <script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.min.js"></script>
-    <script src="${ctx}/src/assets/js/app.js"></script>
+    <script src="${ctx}/src/src/assets/js/app.js"></script>
 </body>
 </html>
