@@ -32,7 +32,8 @@ public class UploadFiles extends HttpServlet {
         // 获得存储上传文件的文件路径
         // String fileSavingFolder =
         // this.getServletContext().getRealPath("/UploadFiles");
-        String fileSavingFolder = "D:\\temp";
+        String fileSavingFolder = getServletContext().getRealPath("/UpAndDown/download/");//文件绝对路径
+//        String fileSavingFolder = "D:\\temp";
         // 获得存储上传文件的完整路径
         // 文件夹位置固定
         String fileSavingPath = fileSavingFolder + File.separator + fileName;

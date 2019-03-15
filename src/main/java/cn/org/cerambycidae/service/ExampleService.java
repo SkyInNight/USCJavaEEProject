@@ -46,7 +46,7 @@ public interface ExampleService<T, K, O> {
     List<T> selectByExample(O eexample);
 
     //通过主键查询数据
-    Student selectByPrimaryKey(K id);
+    T selectByPrimaryKey(K id);
 
     /* 统计数据 */
     long countByExample(O eexample);

@@ -1,14 +1,9 @@
 package cn.org.cerambycidae.Servlet.DataBase;
 
 import cn.org.cerambycidae.pojo.Student;
-import cn.org.cerambycidae.pojo.StudentExample;
 import cn.org.cerambycidae.service.Impl.StudentMybatisServiceImpl;
 import cn.org.cerambycidae.service.StudentService;
-import cn.org.cerambycidae.util.JsonReader;
-import cn.org.cerambycidae.util.NameAndAgeRequest;
-import cn.org.cerambycidae.util.PaginationResult;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
+import cn.org.cerambycidae.util.DataBaseUtil.NameAndAgeRequest;
 import com.alibaba.fastjson.JSONObject;
 
 import javax.servlet.ServletException;
@@ -16,9 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URLDecoder;
 import java.util.List;
@@ -36,10 +29,6 @@ public class ShowDataBaseServlet extends HttpServlet {
 
         //数据处理，数据库连接方面，用来响应消息
         StudentService service=new StudentMybatisServiceImpl();
-
-//        StudentExample studentExample = new StudentExample();
-//        StudentExample.Criteria criteria = studentExample.createCriteria();
-//        criteria.andNameLike("%%");
         List<Student> students = service.selectByExample(NameAndAgeRequest.Conversion(name,age));
 
         //分页查找商品销售记录，需判断是否有带查询条件
