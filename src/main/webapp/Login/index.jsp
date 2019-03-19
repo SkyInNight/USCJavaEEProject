@@ -71,6 +71,9 @@
         font-family: MyFont;
         src: url(${ctx}/src/fonts/PlayfairDisplay-BoldItalic.ttf)
     }
+    .errorMessage{
+        color: red;
+    }
 </style>
 <%-- 导入jquery --%>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -89,12 +92,12 @@
                 <div class="form-group">
                     <i class="fa fa-user fa-lg"></i>
                     <input type="text" class="form-control required" id="Username" placeholder="请输入用户名"></input>
-                    <label id="UserNameValid"></label>
+                    <label class="errorMessage" id="UserNameValid"></label>
                 </div>
                 <div class="form-group">
                     <i class="fa fa-lock fa-lg"></i>
                     <input type="password" class="form-control required" id="Password" placeholder="请输入密码"></input>
-                    <label id="PasswordValid"></label>
+                    <label class="errorMessage" id="PasswordValid"></label>
                 </div>
                 <div class="form-group">
                     <div id="v_container"
@@ -129,6 +132,8 @@
 <script type="text/javascript">
     $("#button_id").click(function () {
         var res = verifyCode.validate(document.getElementById("code_input").value);
+        $("#UserNameValid").text("");
+        $("#PasswordValid").text("");
         if (!res) {
             alert("验证码输入错误");
             return false;
@@ -140,8 +145,13 @@
                     password: $("#Password").val()
                 })
                 .then(function (response) {
-                    if (response.data=="false"){
-                        alert("用户名或密码错误");
+                    if (response.data=="NameError"){
+                        // alert("用户名错误");
+                        $("#UserNameValid").text("用户名不存在");
+                    }
+                    if (response.data=="PasswordError"){
+                        // alert("密码错误");
+                        $("#PasswordValid").text("密码错误");
                     }
                     if (response.data=="success"){
                         alert("登录成功，欢迎光临");
@@ -167,8 +177,10 @@
             //验证
             var res = verifyCode.validate(document.getElementById("code_input").value);
             if (!res) {
+                $("#lab0").css("color","red");
                 $("#lab0").text("验证错误");
             } else {
+                $("#lab0").css("color","black");
                 $("#lab0").text("验证正确");
             }
         });

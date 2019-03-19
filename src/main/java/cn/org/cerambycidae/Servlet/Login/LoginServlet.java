@@ -1,15 +1,15 @@
 package cn.org.cerambycidae.Servlet.Login;
 
 import cn.org.cerambycidae.pojo.UserInfo;
-import cn.org.cerambycidae.service.Impl.StudentMybatisServiceImpl;
 import cn.org.cerambycidae.service.Impl.UserInfoServiceImpl;
-import cn.org.cerambycidae.service.StudentService;
 import cn.org.cerambycidae.service.UserInfoService;
 import cn.org.cerambycidae.util.AcceptJson;
 import cn.org.cerambycidae.util.JsonUtil.ToJson;
 import cn.org.cerambycidae.util.LoginUtil.LoginUtil;
+import cn.org.cerambycidae.util.LoginUtil.LoginValidatieUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import sun.rmi.runtime.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,6 +32,10 @@ public class LoginServlet extends HttpServlet {
         JSONObject userJson = JSONObject.parseObject(json);
         UserInfo user = JSON.toJavaObject(userJson,UserInfo.class);
 
+        //检测登录数据是否合法
+        String message = LoginValidatieUtil.Convert(user);
+        pw.print(message);
+        /*
         //对获得的数据进行查询
         UserInfoService userInfoService = new UserInfoServiceImpl();
         List<UserInfo> userInfos = userInfoService.selectByExample(LoginUtil.Convert(user.getName(),user.getPassword()));
@@ -47,6 +51,7 @@ public class LoginServlet extends HttpServlet {
             String str = ToJson.Convert(message);
             pw.print(ToJson.Convert(message));
         }
+        */
         pw.flush();
         pw.close();
     }
