@@ -21,6 +21,7 @@
 - 通过Servlet输出Hello World
     - 代码路径：cn.org.cerambycidae.Servlet -> HelloWorldServlet
     - 浏览器输出路径：/
+
 - 数据库连接
     - 数据库信息：
         - 数据库连接地址：www.cerambycidae.org.cn
@@ -42,3 +43,16 @@
     - 代码路径：cn.org.ceramycidae.Servlet.DataBase -> ShowDataBaseServlet
 
     - 浏览器输出路径：/DataBase
+
+- 文件上传下载
+
+    - 代码路径：
+        - 上传：cn.org.ceramycidae.Servlet.FilesUpAndDown->DownLoadFilesServlet
+        - 下载：cn.org.ceramycidae.Servlet.FilesUpAndDown->UpLoadFilesServlet
+    - 浏览器输出路径：
+        - 上传：/UpAndDown
+
+- Login界面
+
+    - 代码路径：cn.org.ceramycidae.Servlet.Login->LoginServlet
+    - 浏览器输出路径：/Login
