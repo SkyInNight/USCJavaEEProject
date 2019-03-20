@@ -1,4 +1,4 @@
-package cn.org.filesUpAndDown;
+package cn.org.cerambycidae.Servlet.FilesUpAndDown;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @WebServlet("/UpAndDown/DownloadFiles")
-public class DownloadFiles extends HttpServlet {
+public class DownLoadFilesServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String filename = request.getParameter("name");
         // 防止读取name名乱码
