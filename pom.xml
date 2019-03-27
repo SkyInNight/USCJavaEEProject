@@ -18,7 +18,7 @@
             <scope>provided</scope>
         </dependency>
 
-         <!--https://mvnrepository.com/artifact/javax.servlet/jstl-->
+        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -141,6 +141,30 @@
             <scope>provided</scope>
         </dependency>
 
+
+        <!-- JSF Web快捷开发包 -->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.primefaces/primefaces &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.primefaces</groupId>-->
+            <!--<artifactId>primefaces</artifactId>-->
+            <!--<version>6.2</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.faces/jsf-api &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>javax.faces</groupId>-->
+            <!--<artifactId>jsf-api</artifactId>-->
+            <!--<version>1.2_12</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Glassfish服务器    &ndash;&gt;-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.main.common/glassfish-api &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish.main.common</groupId>-->
+            <!--<artifactId>glassfish-api</artifactId>-->
+            <!--<version>5.1.0</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 

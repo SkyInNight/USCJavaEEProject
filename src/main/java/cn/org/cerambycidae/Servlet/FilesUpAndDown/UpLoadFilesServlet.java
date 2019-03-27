@@ -1,4 +1,4 @@
-package cn.org.filesUpAndDown;
+package cn.org.cerambycidae.Servlet.FilesUpAndDown;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 @WebServlet("/UploadFiles")
 @MultipartConfig
-public class UploadFiles extends HttpServlet {
+public class UpLoadFilesServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doGet(req, resp);
 
