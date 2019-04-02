@@ -5,15 +5,15 @@
 > web开发版本为3.0以上，可以没有web.xml文件  
 > 原先为Idea项目，为可以全IDE开发此项目，故改成Maven项目  
 
-* [Introduction](#Introduction)  
+* [Introduction](#introduction)  
 * [运行说明](#运行说明)
 * [完成功能说明](#完成功能说明)
-  * [1. 通过Servlet输出Hello World](##1.通过Servlet输出HelloWorld)
-  * [2. 数据库连接](##2.数据库连接)
-  * [3. 文件上传下载](##3.文件上传下载)
-  * [4. Login界面](##4.Login界面)
-  * [5. JSF Login登录页面](##5.JSF-Login登录页面)
-  * [6. JSF Student学生管理页面](##6.JSF-Student学生管理页面)
+  * [1. 通过Servlet输出Hello World](#1通过servlet输出helloworld)
+  * [2. 数据库连接](#2数据库连接)
+  * [3. 文件上传下载](#3文件上传下载)
+  * [4. Login界面](#4login界面)
+  * [5. JSF Login登录页面](#5jsf-login登录页面)
+  * [6. JSF Student学生管理页面](#6jsf-student学生管理页面)
 
 ## Introduction
  
