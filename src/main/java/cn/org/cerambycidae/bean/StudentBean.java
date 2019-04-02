@@ -1,6 +1,5 @@
 package cn.org.cerambycidae.bean;
 
-import cn.org.cerambycidae.pojo.Student;
 import cn.org.cerambycidae.pojo.StudentJSFInfo;
 import cn.org.cerambycidae.pojo.StudentJSFInfoExample;
 import cn.org.cerambycidae.service.Impl.StudentJSFInfoServiceImpl;
