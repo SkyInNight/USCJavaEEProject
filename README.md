@@ -8,7 +8,7 @@
 * [Introduction](#Introduction)  
 * [运行说明](#运行说明)
 * [完成功能说明](#完成功能说明)
-  * [1. 通过Servlet输出Hello World](#1. 通过Servlet输出Hello World)
+  * [1. 通过Servlet输出Hello World](#通过Servlet输出Hello World)
   * [2. 数据库连接](#2. 数据库连接)
   * [3. 文件上传下载](#3. 文件上传下载)
   * [4. Login界面](#4. Login界面)
@@ -16,7 +16,7 @@
   * [6. JSF Student学生管理页面](#6. JSF Student学生管理页面)
 
 ## Introduction
-
+ 
 - 此项目为上课老师布置的一些小组合作学习时的作业
 - 项目目录结构
   - src
@@ -30,12 +30,12 @@
   - 在maven执行选项中输入tomcat7:run即可
   - 也可用maven命令行执行：输入mvn tomcat7:run即可
 ## 完成功能说明
-### 1. 通过Servlet输出Hello World
+### 通过Servlet输出Hello World
 
 - 代码路径：cn.org.cerambycidae.Servlet -> HelloWorldServlet
 - 浏览器输出路径：/
 
-### 2. 数据库连接
+### 2.数据库连接
 
 - 数据库信息：
     - 数据库连接地址：www.cerambycidae.org.cn
@@ -46,7 +46,7 @@
 
     - 数据库表：usc_student
 
-    - 表结构：
+    - 表结构： 
 
         | 字段名 | 类型    | 注释 |
         | ------ | ------- | ---- |
