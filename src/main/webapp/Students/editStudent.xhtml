@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>学生信息编辑</title>
+</h:head>
+		<!-- 本部分用来进行学生信息的编辑，将页面中的控件与托管bean
+			“studentBean.aStudent”的属性相关联，按钮的action与托管bean
+			“studentBean”的UpdateStudent方法相关联 -->
+<h:body>
+<h2><div align="center">当前学生信息</div></h2>
+<h:form> 
+	<div align="center">       
+	编号：<h:inputText id="stu_Num" value="#{studentBean.aStudent.stu_Num}"/><br/>
+	姓名：<h:inputText id="stu_Name" value="#{studentBean.aStudent.stu_Name}"/><br/>
+	年龄：<h:inputText id="stu_Age" value="#{studentBean.aStudent.stu_Age}"/><br/>
+	性别：<h:inputText id="stu_Gender" value="#{studentBean.aStudent.stu_Gender}"/><br/>
+	班级：<h:inputText id="stu_Team" value="#{studentBean.aStudent.stu_TeamNum}"/><br/>
+	研究方向：<h:inputText id="stu_Major" value="#{studentBean.aStudent.stu_Major}"/><br/><br/>
+	<h:commandButton id="submit" value="提交" action="#{studentBean.UpdateStudent}" />
+	</div>
+</h:form>
+</h:body>
+</html>

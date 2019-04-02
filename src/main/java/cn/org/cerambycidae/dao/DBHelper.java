@@ -14,7 +14,9 @@ public class DBHelper {
     private static String password;                                                 //密码
     private static  final String JDBC_PROPERTIES_PATH="properties/jdbc.properties";       //配置文件路径
 
-
+    /**
+     * 创建DBHelper类的时候即可开始初始化参数
+     */
     static{
         properties=new Properties();
         try {
@@ -29,7 +31,9 @@ public class DBHelper {
     }
 
     public static Connection getConnection() throws Exception{
+        //获取sql的驱动com.mysql.cj.jdbc.Driver
         Class.forName(driver);
+        //配置连接数据库
         Connection connection= DriverManager.getConnection(url,username,password);
         return connection;
     }
@@ -43,6 +47,7 @@ public class DBHelper {
     }
 
     public static void closeResource(Connection conn, PreparedStatement pst, ResultSet rs)throws Exception{
+        //关闭数据库连接
         if(rs!=null){
             rs.close();
         }

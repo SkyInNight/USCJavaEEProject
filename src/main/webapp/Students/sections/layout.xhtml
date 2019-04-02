@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>页面布局</title>
+</head>
+<!-- 定义一个模板，作为示例用来实现统一的页面布局  -->
+<body>
+	<!-- ui:insert  用来定义页面的组成部分，在这个例子里，
+	由上、中、下三部分组成，其中中部又分为左右两部分 -->
+	<ui:insert name="top">
+	</ui:insert>
+	<!-- h:panelGrid 用来定义页面的网格，可嵌套 -->
+	<h:panelGrid columns="2" border="1">
+		<h:panelGroup>
+			<ui:insert name="middle_left">
+			</ui:insert>
+		</h:panelGroup>
+		<h:panelGroup>	
+			<ui:insert name="middle_right">
+			</ui:insert>
+		</h:panelGroup>
+	</h:panelGrid>
+	<ui:insert name="content" />
+</body>
+</html>

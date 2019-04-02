@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Default Header</title>
+</head>
+<!-- 页面布局中中部右侧middle_right部分的实现  -->
+<body>
+	<ui:composition>
+	<!-- action动作行为需要包括在form中  -->
+	<h:form>
+		添加操作：
+		<!-- 本部分用来构造查询界面，将页面中的输入控件与托管bean
+			“studentBean”的属性相关联，按钮的action与托管bean
+			“studentBean”的AddStudent方法相关联 -->
+		<h:panelGrid columns="4">
+ 	    	<h:outputText value="学号："/> <h:inputText id="stu_Num" value="#{studentBean.stu_Num}"/>
+ 	    	<h:outputText value="姓名："/> <h:inputText id="stu_Name" value="#{studentBean.stu_Name}"/>
+ 	    	<h:outputText value="年龄："/>	<h:inputText id="stu_Age" value="#{studentBean.stu_Age}"/>
+ 	    	<h:outputText value="性别："/>	<h:inputText id="stu_Gender" value="#{studentBean.stu_Gender}"/>
+ 	    	<h:outputText value="班级："/><h:inputText id="stu_Team" value="#{studentBean.stu_TeamNum}"/>
+ 	    	<h:outputText value="专业："/>	<h:inputText id="stu_Major" value="#{studentBean.stu_Major}"/>
+		</h:panelGrid>
+		<h:commandButton value="添加" action="#{studentBean.AddStudent}" />
+	</h:form> 
+	</ui:composition>
+</body>
+</html>

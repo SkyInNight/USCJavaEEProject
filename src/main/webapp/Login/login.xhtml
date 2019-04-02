@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+<h:head>
+<title>Login</title>
+</h:head>
+<h:body>
+<h:form>
+ 	<h3>Please enter your name and password.</h3>
+ 			<table>
+ 				<tr>
+ 					<td>Name:</td>
+ 					<td><h:inputText value="#{userBean.name}" /></td>
+ 				</tr>
+	 			<tr>
+					<td>Password:</td>
+ 					<td><h:inputSecret value="#{userBean.password}" /></td>
+ 				</tr>
+ 			</table>
+ 	<p><h:commandButton value="Login" action="#{userBean.VerifyPassword()}"/></p>
+</h:form>
+ 	</h:body>
+ </html>
