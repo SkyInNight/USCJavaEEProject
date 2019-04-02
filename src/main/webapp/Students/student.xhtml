@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>学生信息</title>
+</head>
+<body>
+	<!-- student.xhtml可以看做是layout.xhtml页面布局的一个实现 -->
+	<ui:composition template ="/Students/sections/layout.xhtml">
+		<!-- 分别指定layout中的各个部分用哪个页面来实现 -->
+		<ui:define name="top">
+			<ui:include src="/Students/sections/top.xhtml" />
+		</ui:define>
+		<ui:define name="middle_left">
+			<ui:include src="/Students/sections/middle_left.xhtml" />
+		</ui:define>
+		<ui:define name="middle_right">
+			<ui:include src="/Students/sections/middle_right.xhtml" />
+		</ui:define>
+		<ui:define name="content">
+			<ui:include src="/Students/sections/content.xhtml" />
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

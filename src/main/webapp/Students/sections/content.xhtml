@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Default Header</title>
+</head>
+<body>
+	<!-- 页面布局的下部content部分的实现  -->
+	<ui:composition>
+		<!-- action动作行为需要包括在form中  -->
+        <h:form><div align="left">
+        	<!-- 用数据表h:dataTable以列表方式来显示学生 信息, 数据表的数据来自于托管bean
+			“studentBean”的allStudent属性，  用"item"来代表其每一条记录, 因为allStuent是实体对象StudentEO的集合，
+			因此item是StudentEO对象 -->
+            <h:dataTable  value= "#{studentBean.allStudent}" var= "item" border="1" rowIndexVar="row">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText   value= "学号 "   /> 
+                    </f:facet>
+                    <h:outputText   value= "#{item.stu_Num} "   /> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header">
+                        <h:outputText   value= "姓名 "   /> 
+                    </f:facet>
+                    <h:outputText   value= "#{item.stu_Name} "   /> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header">
+                        <h:outputText   value= "年龄"   /> 
+                    </f:facet>
+                    <h:outputText   value= "#{item.stu_Age} "   /> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header">
+                        <h:outputText   value= "性别"   /> 
+                    </f:facet>
+                    <h:outputText value= "#{item.stu_Gender} " /> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header">
+                        <h:outputText   value= "班级"   /> 
+                    </f:facet>
+                    <h:outputText value= "#{item.stu_TeamNum} " /> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header">
+                        <h:outputText   value= "研究方向"   /> 
+                    </f:facet>
+                    <h:outputText   value= "#{item.stu_Major} "   /> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header">
+                        <h:outputText   value= "操作"   /> 
+                    </f:facet>
+                    <h:commandLink  id="edit" value="编辑" action="#{studentBean.EditStudent}" >
+                    	<f:param name="studentBeanNum" value="#{item.stu_Num}"></f:param>
+                    </h:commandLink>
+                    <h:outputText value="  "/>
+                    <h:commandLink  id="delete" value="删除" action="#{item.DeleteStudent}" >
+                    	<f:param name="studentBeanNum" value="#{item.stu_Num}"></f:param>
+                    </h:commandLink>
+                </h:column>                     
+     	</h:dataTable> <br/><br/></div>
+     </h:form>
+	</ui:composition>
+</body>
+</html>

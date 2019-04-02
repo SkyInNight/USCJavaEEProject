@@ -9,8 +9,32 @@
 		<display-name>login.xhtml</display-name>
 		<from-view-id>/Login/login.xhtml</from-view-id>
 		<navigation-case>
-			<from-outcome>success</from-outcome>
-			<to-view-id>http://www.cerambycidae.org.cn</to-view-id>
+			<from-outcome>sucess</from-outcome>
+			<to-view-id>/Welcome/welcome.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>login.xhtml</display-name>
+		<from-view-id>/Login/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>PasswordError</from-outcome>
+			<to-view-id>/Error/passwordError.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>login.xhtml</display-name>
+		<from-view-id>/Login/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>NameError</from-outcome>
+			<to-view-id>/Error/userNameError.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>sections/content.xhtml</display-name>
+		<from-view-id>/Students/sections/content.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>editStudent</from-outcome>
+			<to-view-id>/Students/editStudent.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
