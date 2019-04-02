@@ -12,8 +12,8 @@
   * [2. 数据库连接](#2.数据库连接)
   * [3. 文件上传下载](#3.文件上传下载)
   * [4. Login界面](#4.Login界面)
-  * [5. JSF Login登录页面](#5.JSF:Login登录页面)
-  * [6. JSF Student学生管理页面](#6.JSF:Student学生管理页面)
+  * [5. JSF Login登录页面](#5.JSF-Login登录页面)
+  * [6. JSF Student学生管理页面](#6.JSF-Student学生管理页面)
 
 ## Introduction
  
@@ -74,7 +74,7 @@
 - 代码路径：cn.org.ceramycidae.Servlet.Login->LoginServlet
 - 浏览器输出路径：/Login
 
-### 5.JSF:Login登录页面
+### 5.JSF-Login登录页面
 
 - 代码路径：
     - jsf(xhtml)路径：webapp/Login/login.xhtml
@@ -82,7 +82,7 @@
         - UserBean：cn.org.cerambycidae.bean.UserBean
 - 浏览器输出路径：/faces/Login/login.xhtml
 
-### 6.JSF:Student学生管理页面
+### 6.JSF-Student学生管理页面
 
 - 数据库信息:
 
