@@ -7,6 +7,13 @@
 
 * [Introduction](#Introduction)  
 * [运行说明](#运行说明)
+* [完成功能说明](#完成功能说明)
+  * [1. 通过Servlet输出Hello World](#1. 通过Servlet输出Hello World)
+  * [2. 数据库连接](#2. 数据库连接)
+  * [3. 文件上传下载](#3. 文件上传下载)
+  * [4. Login界面](#4. Login界面)
+  * [5. JSF Login登录页面](#5. JSF Login登录页面)
+  * [6. JSF Student学生管理页面](#6. JSF Student学生管理页面)
 
 ## Introduction
 
