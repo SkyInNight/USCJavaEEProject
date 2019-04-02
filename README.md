@@ -5,8 +5,18 @@
 > web开发版本为3.0以上，可以没有web.xml文件  
 > 原先为Idea项目，为可以全IDE开发此项目，故改成Maven项目  
 
-## Introduction
+* [Introduction](#introduction)  
+* [运行说明](#运行说明)
+* [完成功能说明](#完成功能说明)
+  * [1. 通过Servlet输出Hello World](#1通过servlet输出helloworld)
+  * [2. 数据库连接](#2数据库连接)
+  * [3. 文件上传下载](#3文件上传下载)
+  * [4. Login界面](#4login界面)
+  * [5. JSF Login登录页面](#5jsf-login登录页面)
+  * [6. JSF Student学生管理页面](#6jsf-student学生管理页面)
 
+## Introduction
+ 
 - 此项目为上课老师布置的一些小组合作学习时的作业
 - 项目目录结构
   - src
@@ -19,13 +29,14 @@
 - 项目克隆到本地导入到IDE中即可使用maven运行
   - 在maven执行选项中输入tomcat7:run即可
   - 也可用maven命令行执行：输入mvn tomcat7:run即可
-## 完成功能说明
-### 1. 通过Servlet输出Hello World
+## 完成功能说明  
+
+### 1.通过Servlet输出HelloWorld
 
 - 代码路径：cn.org.cerambycidae.Servlet -> HelloWorldServlet
 - 浏览器输出路径：/
 
-### 2. 数据库连接
+### 2.数据库连接  
 
 - 数据库信息：
     - 数据库连接地址：www.cerambycidae.org.cn
@@ -36,7 +47,7 @@
 
     - 数据库表：usc_student
 
-    - 表结构：
+    - 表结构： 
 
         | 字段名 | 类型    | 注释 |
         | ------ | ------- | ---- |
@@ -50,7 +61,7 @@
 
 - 浏览器输出路径：/DataBase
 
-### 3. 文件上传下载
+### 3.文件上传下载
 
 - 代码路径：
     - 上传：cn.org.ceramycidae.Servlet.FilesUpAndDown->DownLoadFilesServlet
@@ -58,12 +69,12 @@
 - 浏览器输出路径：
     - 上传：/UpAndDown
 
-### 4. Login界面
+### 4.Login界面 
 
 - 代码路径：cn.org.ceramycidae.Servlet.Login->LoginServlet
 - 浏览器输出路径：/Login
 
-### 5. JSF Login登录页面
+### 5.JSF-Login登录页面
 
 - 代码路径：
     - jsf(xhtml)路径：webapp/Login/login.xhtml
@@ -71,7 +82,7 @@
         - UserBean：cn.org.cerambycidae.bean.UserBean
 - 浏览器输出路径：/faces/Login/login.xhtml
 
-### 6. JSF Student学生管理页面
+### 6.JSF-Student学生管理页面
 
 - 数据库信息:
 
