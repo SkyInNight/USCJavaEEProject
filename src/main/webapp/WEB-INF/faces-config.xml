@@ -37,5 +37,9 @@
 			<to-view-id>/Students/editStudent.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	<navigation-rule>
+		<display-name>RandomNum/Random.xhtml</display-name>
+		<from-view-id>/RandomNum/Random.xhtml</from-view-id>
+	</navigation-rule>
 
 </faces-config>
