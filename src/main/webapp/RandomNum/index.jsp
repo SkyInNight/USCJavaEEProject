@@ -15,8 +15,6 @@ pageEncoding="UTF-8"%>
 </head>
 <body>
 <div id="qm_con_body"><div id="mailContentContainer" class="qmbox qm_con_body_content qqmail_webmail_only" style="">
-
-
     <style type="text/css">
         .qmbox .link:link, .qmbox .link:active, .qmbox .link:visited {
             color:#2672ec !important;
@@ -52,7 +50,6 @@ pageEncoding="UTF-8"%>
                 .then(function (response) {
                     //局部刷新动态组件
                     alert(response.data)
-                    // $("#random").text(response.data)
                     $("#table").load(location.href+"#table");
                 });
         });

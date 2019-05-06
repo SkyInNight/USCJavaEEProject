@@ -185,6 +185,13 @@
             <version>3.10.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- JSF Web快捷开发包 -->
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.primefaces/primefaces &ndash;&gt;-->
         <!--<dependency>-->
