@@ -31,7 +31,7 @@ public class ReadFile extends HttpServlet{
         out.println("       <HEAD><meta charset=\"UTF-8\"><TITLE>A Servlet</TITLE></HEAD>");
         out.println("   <BODY>");
         out.println("   <XMP>");
-        String fileName = "/DataBase/index.html";//文件相对路径
+        String fileName = "/DataBase/index.jsp";//文件相对路径
         String filePath = this.getServletContext().getRealPath(fileName);//文件绝对路径
         out.println("要读取的文件：" + filePath);
         out.println("内容如下：");
